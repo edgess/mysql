@@ -10,24 +10,33 @@ import java.sql.SQLException;
 public class Demo {
 
 	public static void main(String[] args) throws Exception {
-		 String driver = "com.mysql.jdbc.Driver";
-		 String url = "jdbc:mysql://192.168.10.30/bak_log";
-		 String user = "log";
-		 String password = "1234";
-//		 String driver = "com.mysql.jdbc.Driver";
-//		 String url = "jdbc:mysql://192.168.10.183/edge";
-//		 String user = "edge";
-//		 String password = "1234";
+//		String driver = "com.mysql.jdbc.Driver";
+//		String url = "jdbc:mysql:///test";
+//		String user = "root";
+//		String password = "qwesza";
+//		String sql = "select * from test";
+		
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://192.168.10.30/bak_log";
+		String user = "log";
+		String password = "1234";
+		String sql = "select * from log ORDER BY date desc";
+		 
+//		String driver = "com.mysql.jdbc.Driver";
+//		String url = "jdbc:mysql://192.168.10.183/edge";
+//		String user = "edge";
+//		String password = "1234";
+//		String sql = "select * from log";
 
-		//String driver = "oracle.jdbc.driver.OracleDriver";
-		//String url = "jdbc:oracle:thin:@localhost:1521:orcl";
-		//String user = "scott";
-		//String password = "tiger";
+//		String driver = "oracle.jdbc.driver.OracleDriver";
+//		String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+//		String user = "scott";
+//		String password = "tiger";
+//		String sql = "select * from test";
 
 		Class.forName(driver);
 		Connection connection = DriverManager.getConnection(url, user, password);
 
-		String sql = "select * from log";
 		PreparedStatement preparedStatement = null;
 		ResultSet resultSet = null;
 
