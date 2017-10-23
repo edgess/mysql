@@ -16,11 +16,18 @@ public class Demo {
 //		String password = "qwesza";
 //		String sql = "select * from test";
 		
-		String driver = "com.mysql.jdbc.Driver";
-		String url = "jdbc:mysql://192.168.10.30/bak_log";
-		String user = "log";
+		String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+		String url = "jdbc:sqlserver://192.168.10.117:1433;DatabaseName=edge";
+		String user = "edge";
 		String password = "1234";
-		String sql = "select * from log ORDER BY date desc";
+		String sql = "select * from DemoDepts";		
+		
+		
+//		String driver = "com.mysql.jdbc.Driver";
+//		String url = "jdbc:mysql://192.168.10.30/bak_log";
+//		String user = "log";
+//		String password = "1234";
+//		String sql = "select * from log ORDER BY date desc";
 		 
 //		String driver = "com.mysql.jdbc.Driver";
 //		String url = "jdbc:mysql://192.168.10.183/edge";
